@@ -4,5 +4,5 @@
 <!--- Comments -->
 - listing the points cicle
 - [ ] listing the points square
-- [ ] [Link](https://github.com/gradle/gradle/blob/master/.github/CONTRIBUTING.md)
+- [ ] [Link](https://www.google.com/)
 - [ ] `Different font`
