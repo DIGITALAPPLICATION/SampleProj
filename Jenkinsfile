@@ -1,28 +1,34 @@
 pipeline {
   agent any
   stages {
-    stage('Stage-1') {
+    stage('init') {
       parallel {
-        stage('Stage-1') {
+        stage('initialization') {
           steps {
             echo 'Hello, I am from Blue Ocean'
           }
         }
-        stage('Stage-1.1') {
+        stage('inits') {
           steps {
             echo 'I am from Stage-1.1'
           }
         }
       }
     }
-    stage('Stage-2') {
+    stage('code checkout') {
       steps {
-        echo 'I am from Stage-2'
+        echo 'Code checkout'
       }
     }
-    stage('Stage-3') {
+    stage('mvn build') {
       steps {
         build 'JavaProject-FreeStyleJob'
+        echo 'Maven build'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying the package'
       }
     }
   }
