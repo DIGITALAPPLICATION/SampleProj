@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Stage-1') {
       steps {
         echo 'Hello, I am from Blue Ocean'
       }
