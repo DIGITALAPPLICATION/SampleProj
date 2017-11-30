@@ -25,7 +25,7 @@ pipeline {
       steps {
         build 'JavaProject-FreeStyleJob'
         echo 'Maven build'
-        bat 'mvn clean install'
+        bat 'mvn clean install -DReleaseVersion=1.1.0'
       }
     }
     stage('Deploy') {
