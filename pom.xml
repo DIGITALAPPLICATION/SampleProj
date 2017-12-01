@@ -5,7 +5,7 @@
   <artifactId>SampleJar</artifactId>
   <packaging>jar</packaging>
   <version>${ReleaseVersion}</version>
-  <name>SampleJar-${ReleaseVersion}</name>
+  <name>${project.artifactId}-${ReleaseVersion}</name>
   
   <dependencies>
     <dependency>
