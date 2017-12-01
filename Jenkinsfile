@@ -1,11 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('initialization') {
-      steps {
-        echo 'Hello, I am from Blue Ocean'
-      }
-    }
+    
     stage('mvn build') {
       steps {
         build 'JavaProject-FreeStyleJob'
