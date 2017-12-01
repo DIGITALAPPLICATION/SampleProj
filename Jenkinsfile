@@ -1,21 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('init') {
-      parallel {
-        stage('initialization') {
-          steps {
-            echo 'Hello, I am from Blue Ocean'
-          }
-        }
-        stage('inits') {
-          steps {
-            echo 'I am from Stage-1.1'
-          }
-        }
+    stage('initialization') {
+      steps {
+        echo 'Hello, I am from Blue Ocean'
       }
     }
-    
     stage('mvn build') {
       steps {
         build 'JavaProject-FreeStyleJob'
