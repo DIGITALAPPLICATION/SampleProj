@@ -22,5 +22,10 @@ pipeline {
         echo 'Deploying the package'
       }
     }
+    stage('report') {
+      steps {
+        writeFile(file: 'raja.txt', text: 'hello raja')
+      }
+    }
   }
 }
