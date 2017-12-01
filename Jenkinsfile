@@ -15,12 +15,7 @@ pipeline {
         }
       }
     }
-    stage('code checkout') {
-      steps {
-        echo 'Code checkout'
-        git(url: 'https://github.com/EMERDs/SampleProj', branch: 'master')
-      }
-    }
+    
     stage('mvn build') {
       steps {
         build 'JavaProject-FreeStyleJob'
